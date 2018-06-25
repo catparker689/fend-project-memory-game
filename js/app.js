@@ -25,7 +25,15 @@ function shuffle(array) {
     return array;
 }
 
+window.addEventListener('click', function flipCard(event) {
+	const cardFlip = event.target;
 
+	if(cardFlip.tagName = 'LI' && (cardFlip.className == 'card match' || cardFlip.className == 'card open show')) {
+    return;
+  }
+
+	cardFlip.className = 'card open show';
+});
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
